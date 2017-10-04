@@ -1,3 +1,5 @@
+// Mostly copied from https://medium.com/@renesansz/tutorial-creating-a-simple-discord-bot-9465a2764dc0
+
 var Discord = require('discord.io');
 var logger = require('winston');
 var auth = require('./auth.json');
