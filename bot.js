@@ -18,9 +18,9 @@ bot.on('ready', function (evt) {
     logger.info(bot.username + ' - (' + bot.id + ')');
 });
 bot.on('message', function (user, userID, channelID, message, evt) {
-    // Our bot needs to know if it will execute a command
-    // It will listen for messages that will start with `!`
+	console.log(message.ID); // is this even a thing??
+	var cid = channelID;
     if (message.indexOf("cape") !== -1) {
-        bot.sendMessage({to: channelID, message: "Just you wait!"});
+        bot.deleteMessage({channelID: cID, messageID: message.ID});
     }
 });
