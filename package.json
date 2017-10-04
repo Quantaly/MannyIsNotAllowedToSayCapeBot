@@ -1,0 +1,11 @@
+{
+  "name": "MannyIsNotAllowedToSayCapeBot",
+  "version": "1.0.0",
+  "description": "Just. No.",
+  "main": "bot.js",
+  "author": "Kai Page (@quantumAssembly)",
+  "dependencies": {
+    "discord.io": "^2.5.3",
+    "winston": "^2.4.0"
+  }
+}
