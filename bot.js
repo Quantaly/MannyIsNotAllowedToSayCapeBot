@@ -18,9 +18,9 @@ bot.on('ready', function (evt) {
     logger.info(bot.username + ' - (' + bot.id + ')');
 });
 bot.on('message', function (user, userID, channelID, message, evt) {
-	console.log(message.id); // is this even a thing??
+	console.log(message.messageID); // is this even a thing??
 	var cid = channelID;
     if (message.indexOf("cape") !== -1) {
-        bot.deleteMessage({channelID: cid, messageID: message.ID});
+        bot.deleteMessage(message);
     }
 });
