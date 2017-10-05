@@ -1,4 +1,10 @@
+Now:
+ - Don't work on #spirit (where cape talk goes) or #spam (where everything goes)
+
+Soon:
  - Make README.md not suck
  - Add XML/JSON with member/channel id numbers
  - Give bot profile image
+
+Later:
  - Fun stuff??
