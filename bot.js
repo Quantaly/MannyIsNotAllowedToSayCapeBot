@@ -4,23 +4,24 @@ var auth = require('./auth.json');
 // Configure logger settings
 logger.remove(logger.transports.Console);
 logger.add(logger.transports.Console, {
-    colorize: true
+	colorize: true
 });
 logger.level = 'debug';
 // Initialize Discord Bot
 var bot = new Discord.Client({
-   token: auth.token,
-   autorun: true
+	token: auth.token,
+	autorun: true
 });
 bot.on('ready', function (evt) {
-    logger.info('Connected');
-    logger.info('Logged in as: ');
-    logger.info(bot.username + ' - (' + bot.id + ')');
+	logger.info('Connected');
+	logger.info('Logged in as: ');
+	logger.info(bot.username + ' - (' + bot.id + ')');
 });
 bot.on('message', function (user, userID, channelID, message, evt) {
-	console.log(message.messageID); // is this even a thing??
+	//if (userID !== "311598715817426945") return;
+	console.log(message);
 	var cid = channelID;
-    if (message.indexOf("cape") !== -1) {
-        bot.deleteMessage(message);
-    }
+	if (message.indexOf("cape") !== -1) {
+		bot.deleteMessage({channelID: cid, messageID: evt.d.id});
+	}
 });
