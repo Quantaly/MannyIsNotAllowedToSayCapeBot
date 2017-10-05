@@ -1,0 +1,4 @@
+ - Make README.md not suck
+ - Add XML/JSON with member/channel id numbers
+ - Give bot profile image
+ - Fun stuff??

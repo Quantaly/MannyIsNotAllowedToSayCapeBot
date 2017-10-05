@@ -20,7 +20,7 @@ bot.on('ready', function (evt) {
 	logger.info(bot.username + ' - (' + bot.id + ')');
 });
 bot.on('message', function (user, userID, channelID, message, evt) {
-	//if (userID !== "361851304596733962") return;
+	//if (userID !== "361851304596733962") return; // only manny is not allowed to say cape
 	var cid = channelID; // TODO is this necessary, or can I just say "channelID: channelID" later??
 	if (message.toLowerCase().indexOf("cape") !== -1) {
 		console.log(user + " is talking about capes: " + message);
