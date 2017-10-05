@@ -18,10 +18,10 @@ bot.on('ready', function (evt) {
 	logger.info(bot.username + ' - (' + bot.id + ')');
 });
 bot.on('message', function (user, userID, channelID, message, evt) {
-	//if (userID !== "311598715817426945") return;
-	console.log(message);
-	var cid = channelID;
-	if (message.indexOf("cape") !== -1) {
+	//if (userID !== "361851304596733962") return;
+	var cid = channelID; // TODO is this necessary, or can I just say "channelID: channelID" later??
+	if (message.toLowerCase().indexOf("cape") !== -1) {
+		console.log(user + " is talking about capes: " + message);
 		bot.deleteMessage({channelID: cid, messageID: evt.d.id});
 	}
 });
