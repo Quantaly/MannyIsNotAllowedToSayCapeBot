@@ -8,3 +8,9 @@ Soon:
 
 Later:
  - Fun stuff??
+
+Indeterminate:
+ - Better detection than "is 'cape' a substring." e.g. "escape," "caape"
+   ~ regex: /\bc\s*a+\s*p\s*e/i
+   
+// will probably reorganize this soon

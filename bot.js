@@ -19,11 +19,13 @@ bot.on('ready', function (evt) {
 	logger.info('Logged in as: ');
 	logger.info(bot.username + ' - (' + bot.id + ')');
 });
+
+// TODO move event handlers into own files
 bot.on('message', function (user, userID, channelID, message, evt) {
 	//if (userID !== "361851304596733962") return; // only manny is not allowed to say cape
 	var cid = channelID; // TODO is this necessary, or can I just say "channelID: channelID" later??
 	if (message.toLowerCase().indexOf("cape") !== -1) {
-		console.log(user + " is talking about capes: " + message);
+		logger.warn(user + " is talking about capes: " + message);
 		bot.deleteMessage({channelID: cid, messageID: evt.d.id});
 	}
 });
