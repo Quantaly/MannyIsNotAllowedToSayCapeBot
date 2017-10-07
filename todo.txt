@@ -1,16 +1,10 @@
-Now:
- - Don't work on #spirit (where cape talk goes) or #spam (where everything goes)
-
-Soon:
+For 1.1:
  - Make README.md not suck
- - Add XML/JSON with member/channel id numbers
- - Give bot profile image
-
-Later:
- - Fun stuff??
-
-Indeterminate:
+ - Make profile image for bot
  - Better detection than "is 'cape' a substring." e.g. "escape," "caape"
    ~ regex: /\bc\s*a+\s*p\s*e/i
-   
-// will probably reorganize this soon
+ - Leave message for first-time offenders
+ 
+Later:
+ - Fun stuff??
+   ~ Respond to triggering DM's with ("Say that again, to my face. >:(") and if the user sends it 5(?) times, say ("Look, it's not my fault I only have one response template!")
