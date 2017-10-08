@@ -1,5 +1,4 @@
 For 1.1:
- - Make README.md not suck
  - Make profile image for bot
  - Better detection than "is 'cape' a substring." e.g. "escape," "caape"
    ~ regex: /\bc\s*a+\s*p\s*e/i
