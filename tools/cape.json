@@ -1,0 +1,15 @@
+{
+	"blacklist": [
+		{"source": "\\bc\\s*a+\\s*p\\s*e", "flags": "i"}
+	],
+	"whitelist": [
+		{"source": "capebot", "flags": ""}
+	],
+	"tests": {
+		"cape": true,
+		"Cape": true,
+		"escape": false,
+		"caape": true,
+		"Calliope": false
+	}
+}
