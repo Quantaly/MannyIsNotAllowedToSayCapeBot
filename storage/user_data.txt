@@ -1,0 +1,7 @@
+{
+	"<userid>": {
+		"hasTriggered": false,
+		"dmTriggers": 0,
+		"debug": null
+	}
+}
