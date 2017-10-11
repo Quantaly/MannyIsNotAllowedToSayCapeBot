@@ -3,4 +3,4 @@ This is a bot made for FRC Team 5892's Discord server. At one point, there was a
 ### Features
 - Deletes messages with the word "cape" in them.
 
-In the future I plan to add more features. u~u
+It doesn't do a whole lot, but it's good at what it does!

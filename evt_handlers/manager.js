@@ -1,5 +1,5 @@
-var handleMessage = require('./handleMessage')
+var handleMessage = require("./handleMessage")
 
 module.exports = {initialize: function(bot){
-	bot.on('message', handleMessage(bot));
+	bot.on("message", handleMessage(bot));
 }}

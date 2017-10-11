@@ -1,6 +1,2 @@
-For 1.1:
- - Leave message for first-time offenders
- 
-Later:
- - Fun stuff??
-   ~ Respond to triggering DM's with ("Say that again, to my face. >:(") and if the user sends it 5(?) times, say ("Look, it's not my fault I only have one response template!")
+Fun stuff:
+ - Respond to triggering DM's with ("Say that again, to my face. >:(") and if the user sends it 5(?) times, say ("Look, it's not my fault I only have one response template!")

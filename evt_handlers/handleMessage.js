@@ -1,7 +1,7 @@
-logger = require('../logger');
-channels = require('../data/channels.json');
-inspectMsg = require('../tools/inspectMessage');
-udata = require('../storage/user_data');
+logger = require("../logger");
+channels = require("../data/channels.json");
+inspectMsg = require("../tools/inspectMessage");
+udata = require("../storage/user_data");
 
 module.exports = function(bot){ return function(user, userID, channelID, message, evt) {
 	if (messageIsBad(user, userID, channelID, message, evt)) {
@@ -40,13 +40,13 @@ function cmdDebug(bot, user, userID, channelID, message, evt) { // dang am I tir
 	var oldValue = udata.getUser(userID).debug;
 	logger.debug(oldValue);
 	var msgarr = message.split(" ");
-	if (msgarr.length == 1) {
+	if (msgarr.length === 1) {
 		bot.sendMessage({to: channelID, message: "<@" + userID + ">, your debug value is " + oldValue + "."});
 	} else {
 		var newValue = msgarr.slice(1).join(" ");
 		udata.setUserProperty(userID, "debug", newValue);
 		bot.sendMessage({to: channelID, message: "<@" + userID + ">, your new debug value is " + newValue + "."});
-		if (oldValue == null) { bot.sendMessage({to: channelID, message: "Not sure what you want with a debug value, but you have one now, so that's something."}) };
-		if (oldValue == newValue) { bot.sendMessage({to: channelID, message: "I mean, that was also your old debug value, but whatever."}) };
+		if (oldValue === null) { bot.sendMessage({to: channelID, message: "Not sure what you want with a debug value, but you have one now, so that's something."}) };
+		if (oldValue === newValue) { bot.sendMessage({to: channelID, message: "I mean, that was also your old debug value, but whatever."}) };
 	}
 }

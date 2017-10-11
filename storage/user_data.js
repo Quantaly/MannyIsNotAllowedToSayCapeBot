@@ -19,7 +19,7 @@ function save() { // TODO figure out how to async
 
 udata.getUser = function(id) {
 	var ret = this[id];
-	if (ret == undefined) {
+	if (ret === undefined) {
 		this[id] = blankUser();
 		ret = this[id];
 	}
@@ -27,7 +27,7 @@ udata.getUser = function(id) {
 };
 
 udata.setUserProperty = function(id, property, value) {
-	if (this[id] == undefined) {
+	if (this[id] === undefined) {
 		this[id] = blankUser();
 	}
 	this[id][property] = value;
