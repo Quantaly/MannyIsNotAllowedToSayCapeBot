@@ -9,6 +9,7 @@ This folder is used by the bot to store data. Obviously, this is liable to chang
 	}
 }
 ```
+<<<<<<< HEAD
 Okay so maybe it's changed since I wrote this but we can ignore that. The important part is that user_data.json will have a bunch of fields named by `userid`s, which will have fields inside of them called `hasTriggered`, `dmTriggers`, and `debug`.
 
 Makes sense? Good.
