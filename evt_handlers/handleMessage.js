@@ -33,6 +33,7 @@ function handleCommands(bot, user, userID, channelID, message, evt) {
 
 function cmdDebug(bot, user, userID, channelID, message, evt) { // dang am I tired of typing that
 	var oldValue = udata.getUser(userID).debug;
+	logger.debug(oldValue);
 	var msgarr = message.split(" ");
 	if (msgarr.length == 1) {
 		bot.sendMessage({to: channelID, message: "<@" + userID + ">, your debug value is " + oldValue + "."});

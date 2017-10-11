@@ -1,6 +1,7 @@
 var fs = require("fs");
+var logger = require("../logger.js");
 
-udata = require("./user_data.json"); // for some reason this doesn't read the new version?
+udata = require("./user_data.json");
 
 function blankUser() {
 	return {hasTriggered: false, dmTriggers: 0, debug: null};
@@ -10,25 +11,29 @@ var saving = false;
 function save() { // TODO figure out how to async
 	if (saving) { return; }
 	saving = true;
+	logger.debug("saving");
 	var output = JSON.stringify(udata);
-	fs.writeFileSync("./storage/user_data.json", output, "utf-8");
+	fs.writeFileSync("./storage/user_data.json", output);
 	saving = false;
 }
 
-module.exports = {
-	getUser: function(id) {
-		var ret = udata[id];
-		if (ret == undefined) {
-			udata[id] = blankUser();
-			ret = udata[id];
-		}
-		return ret;
-	},
-	setUserProperty: function(id, property, value) {
-		if (udata[id] == undefined) {
-			udata[id] = blankUser();
-		}
-		udata[id][property] = value;
-		save();
+udata.getUser = function(id) {
+	var ret = this[id];
+	if (ret == undefined) {
+		this[id] = blankUser();
+		ret = this[id];
 	}
-}
+	return ret;
+};
+
+udata.setUserProperty = function(id, property, value) {
+	if (this[id] == undefined) {
+		this[id] = blankUser();
+	}
+	this[id][property] = value;
+	save();
+};
+
+module.exports = udata;
+
+logger.debug(module.exports.getUser("311598715817426945").debug);
