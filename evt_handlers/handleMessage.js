@@ -7,6 +7,10 @@ module.exports = function(bot){ return function(user, userID, channelID, message
 	if (messageIsBad(user, userID, channelID, message, evt)) {
 		logger.warn(user + " is talking about capes: " + message);
 		bot.deleteMessage({channelID: channelID, messageID: evt.d.id});
+		if (!udata.getUser(userID).hasTriggered) {
+			bot.sendMessage({to: channelID, message: "Hey there <@" + userID + ">, just a heads-up: Talking about capes isn't allowed here."});
+			udata.setUserProperty(userID, "hasTriggered", true);
+		}
 	} else {
 		handleCommands(bot, user, userID, channelID, message, evt);
 	}
@@ -14,6 +18,7 @@ module.exports = function(bot){ return function(user, userID, channelID, message
 
 function messageIsBad(user, userID, channelID, message, evt) {
 	//if (channelID === channels.spirit) return false; // capes are decidedly a spirit thing... but the verdict has already been reached.
+	if (userID === "364954406657196032") { return false; } // bot needs ability to tell people off
 	return inspectMsg(message);
 }
 
