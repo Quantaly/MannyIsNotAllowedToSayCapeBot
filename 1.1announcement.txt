@@ -4,7 +4,7 @@ VERSION 1.1 HAS BEEN RELEASED!
 This version encompasses <@311598715817426945>'s entire original vision for me, and includes:
 - BETTER WORD DETECTION! Nobody will be able to escape.
 - FIRST-OFFENDER WARNINGS! Everyone will know what not to say.
-- SEXY PROFILE IMAGE! Thanks to <@311960626559975436> for the meme, and <@201912045057081346> for the idea to use it.
+- SEXY PROFILE IMAGE! Just look at it. So amazing.
 - SECRET DEBUG FEATURES! wait what
 
 All this, and more! Coming soon to a Discord server near you!
