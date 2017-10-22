@@ -1,6 +1,6 @@
 {
 	"blacklist": [
-		{"source": "\\b[ck][\\s\\.]*[a@]+[\\s\\.]*p[\\s\\.]*e", "flags": "i"}
+		{"source": "\\b[ck][\\s\\.]*[a@]+[\\s\\.]*[p][\\s\\.]*[e3]", "flags": "i"}
 	],
 	"whitelist": [
 		{"source": "capebot", "flags": ""}
