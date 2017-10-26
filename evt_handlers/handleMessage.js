@@ -14,6 +14,11 @@ module.exports = function(bot){ return function(user, userID, channelID, message
 	} else {
 		handleCommands(bot, user, userID, channelID, message, evt);
 	}
+
+	// might as well make this useful for something else.
+	if (message.indexOf("team5892.github.io") !== -1) {
+		bot.sendMessage({to: channelID, message: "That's the wrong URL. Our team website is hosted at http://frc5892.github.io."});
+	}
 }};
 
 function messageIsBad(user, userID, channelID, message, evt) {
